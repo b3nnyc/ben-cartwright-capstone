@@ -8,15 +8,16 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 
 //Pages
+import Home from './pages/Home/Home';
 
 export default function App() {
   return (
       <BrowserRouter>
-        <Header />
+        {/* <Header /> */}
         <Routes>
-          <Route path='/' element={<Header />}/>
+          <Route path='/' element={<Home />}/>
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
   );
 }
