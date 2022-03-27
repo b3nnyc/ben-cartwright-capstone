@@ -10,6 +10,7 @@ export default function Header() {
             <div className="header__right">
                 <Link to={`/watchlist/`}><button>WATCHLIST</button></Link>
                 <Link to={`/portfolio/`}><button>PORTFOLIO</button></Link>
+                <Link to={`/login/`}><button>LOGIN</button></Link>
                 <input className="header__search" type="text" placeholder="Search" />
             </div>
         </section>
