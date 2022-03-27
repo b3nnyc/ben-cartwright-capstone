@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const quoteApi = "https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols="
+const proxyApi = "http://cors-anywhere.herokuapp.com/"
+const quoteApi = `${proxyApi}https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols=`
 const databaselocation = null
 
 export default {
