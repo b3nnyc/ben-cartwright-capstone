@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 
 //Pages
 import Home from "./pages/Home/Home";
+import Portfolio from "./pages/Portfolio/Portfolio";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
