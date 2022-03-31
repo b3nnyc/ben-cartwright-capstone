@@ -1,0 +1,26 @@
+.hero {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card-left,
+.card-right {
+  margin-top: 5%;
+  width: 30%;
+  box-shadow: 0 0 7px lightgrey;
+  border-radius: 10px;
+
+  &__price,
+  &__open {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}

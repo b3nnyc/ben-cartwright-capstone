@@ -19,6 +19,7 @@ const styles = {
 export default class Home extends Component {
   state = {
     stockInfo: null,
+    trending: null,
   };
 
   componentDidMount() {
@@ -32,9 +33,17 @@ export default class Home extends Component {
           console.log(error);
         });
     }
+
+    if (!this.state.trending) {
+      apiCall.getTrending().then((res) => {
+        this.setState({ trending: res.data.finance.result[0].quotes });
+      });
+    }
   }
 
   render() {
+    console.log(this.state.trending);
+
     if (!this.state.stockInfo) {
       return <div className="loading"></div>;
     }
