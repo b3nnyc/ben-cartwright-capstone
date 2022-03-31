@@ -4,7 +4,9 @@ const quoteApi = `https://yh-finance.p.rapidapi.com`
 const homeQuotes = `/market/v2/get-quotes?region=US&symbols=qqq%2Cspy`
 const singleQuote = `/market/v2/get-quotes?region=US&symbols=`
 const trending = `/market/get-trending-tickers`
+const chart = `/stock/v3/get-chart`
 const recommendations = `/stock/v2/get-recommendations`
+const news = `/news/v2/get-details`
 const apiKey = `194a67eae9mshafa1551f18bdb31p1e1bacjsnd6211d84a21e`
 const apiHost = `yh-finance.p.rapidapi.com`
 const portfolioDB = null
@@ -24,7 +26,9 @@ export default {
     getWatchlist: () => axios.get(`${watchlistDB}`),
     addWatchlist: (symbol) => axios.post(`${watchlistDB}`, {
         symbol: symbol
-    })
+    }),
+    getChartInfo: (symbol) => axios.get(`${quoteApi}${chart}${symbol}`, {headers: {'X-RapidAPI-Key':`${apiKey}`, 'X-RapidAPI-Host': `${apiHost}`}}),
+    getNews: () => axios.get(`${quoteApi}${news}`)
 }
 
 // /auto-complete for search bar
