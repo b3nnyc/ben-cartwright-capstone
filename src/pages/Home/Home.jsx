@@ -95,6 +95,9 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
+        <div className="trending">
+          <p>trending</p>
+        </div>
       </>
     );
   }
