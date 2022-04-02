@@ -1,0 +1,36 @@
+.header {
+  background-color: #ffffff;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    height: 5rem;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 22rem;
+  }
+
+  &__search {
+    padding-left: 4%;
+    height: 2rem;
+  }
+
+  &__button {
+    border: 1px solid lightgray;
+    height: 10rem;
+    width: 7rem;
+    background-color: white;
+  }
+
+  &__button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+  }
+}
