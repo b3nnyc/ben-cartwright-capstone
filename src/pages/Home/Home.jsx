@@ -108,7 +108,9 @@ export default class Home extends Component {
                 copyrightStyles={styles}
               ></MiniChart>
               <div className="card-right__price">
-                <p>Price: {this.state.stockInfo[1].regularMarketPrice}</p>
+                <p>
+                  Price: {this.state.stockInfo[1].regularMarketPrice.toFixed(2)}
+                </p>
                 <p>
                   Percent Change:{" "}
                   {this.state.stockInfo[1].regularMarketChange.toFixed(2)}%

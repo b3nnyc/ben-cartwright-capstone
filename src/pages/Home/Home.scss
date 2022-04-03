@@ -74,6 +74,15 @@
   border-radius: 7px;
   box-shadow: 0 0 7px lightgrey;
   text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.trending-container:hover {
+  transform: scale(1.1);
+}
+.news-container:hover {
+  transform: scale(1.05);
 }
 
 .news {
@@ -88,6 +97,7 @@
   width: 75%;
   box-shadow: 0 0 7px lightgrey;
   border-radius: 5px;
+  transition: transform 0.2s;
 }
 
 .news-image {
@@ -103,6 +113,10 @@
     display: flex;
     padding-right: 4%;
     justify-content: space-between;
+  }
+
+  &__title {
+    width: 80%;
   }
   &__desc {
     width: 95%;
