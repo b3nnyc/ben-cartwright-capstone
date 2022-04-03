@@ -133,7 +133,7 @@ export default class Home extends Component {
                     <div className="trending-upper">
                       <p className="trending-upper__symbol">{trend.symbol}</p>
                       <p className="trending-upper__price">
-                        Current Price: {trend.regularMarketPrice}
+                        Current Price: {trend.regularMarketPrice.toFixed(2)}
                       </p>
                     </div>
                     <div className="trending-lower">

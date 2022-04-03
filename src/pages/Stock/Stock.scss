@@ -1,13 +1,21 @@
 .container {
   width: 80vw;
-  background-color: white;
   margin: auto;
   border-radius: 10px;
 }
 
-.chart {
+.chart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
   &__title {
-    margin-left: 7.5%;
+    margin-left: 10%;
+  }
+  &__change {
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
   }
 }
 

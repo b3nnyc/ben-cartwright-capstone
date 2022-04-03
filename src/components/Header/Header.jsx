@@ -53,13 +53,6 @@ const styles = {
 };
 
 export default function Header() {
-  const [inputText, setInputText] = useState("");
-  let inputHandler = (e) => {
-    //convert input text to lower case
-    let lowerCase = `"/stock/"${e.target.value}`;
-    setInputText(lowerCase);
-  };
-
   return (
     <section className="header">
       <div className="header__container">
@@ -84,7 +77,6 @@ export default function Header() {
               className="header__search"
               method="get"
               autoComplete="off"
-              onSubmit={inputHandler}
               placeholder="Search"
             />
           </form>
