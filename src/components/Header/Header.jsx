@@ -3,6 +3,7 @@ import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { TickerTape } from "react-ts-tradingview-widgets";
 import { useHistory } from "react-router-dom";
+import { BrowserRouter, Redirect } from "react-router-dom";
 
 const styles = {
   symbols: [
@@ -52,7 +53,7 @@ const styles = {
   },
 };
 
-export default function Header() {
+export default function Header(props) {
   return (
     <section className="header">
       <div className="header__container">
@@ -71,12 +72,11 @@ export default function Header() {
           {/* <Link to={`/login/`}>
           <button>LOGIN</button>
         </Link> */}
-          <form action="/stock/" method="get">
+          <form onSubmit={(e) => props.setSearch(e)}>
             <input
+              id="search"
               type="text"
               className="header__search"
-              method="get"
-              autoComplete="off"
               placeholder="Search"
             />
           </form>

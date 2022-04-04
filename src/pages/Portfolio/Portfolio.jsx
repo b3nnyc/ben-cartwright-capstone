@@ -1,24 +1,20 @@
 import { Component } from "react";
+import PortfolioForm from "../../components/PortfolioForm/PortfolioForm";
+import PortfolioContainer from "../../components/PortfolioContainer/PortfolioContainer";
 
-const INITIAL_STATE = {
-  ticker: "",
-  position: "BUY",
-  quantity: 10,
-  price: 50,
-};
-
-export default class Portfolio extends Component {
-  render() {
-    return (
-      <div className="background">
-        <div className="container">
-          <div className="portfolio">
-            <div className="portfolio__title">
-              <h2>Portfolio</h2>
-            </div>
+export default function Portfolio() {
+  return (
+    <div className="background">
+      <div className="container">
+        <div className="portfolio">
+          <div className="portfolio__title">
+            <h2>Portfolio</h2>
+          </div>
+          <div>
+            <PortfolioContainer />
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
