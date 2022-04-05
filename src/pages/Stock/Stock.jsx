@@ -31,13 +31,21 @@ export default class Stock extends Component {
         <div className="background">
           <div className="container">
             <div className="chart-header">
-              <h2 className="chart-header__title">{this.state.stock}</h2>
-              <div className="chart-header__change">
+              <h2 className="chart-header__title">
+                {this.state.stock.toUpperCase()}
+              </h2>
+              <div className="chart-header__performance">
                 <h3 className="chart-header__price">
                   $
                   {!this.state.stockInfo
                     ? ""
-                    : this.state.stockInfo.regularMarketPrice}
+                    : this.state.stockInfo.regularMarketPrice.toFixed(2)}
+                </h3>
+                <h3 className="chart-header__change">
+                  Change: $
+                  {!this.state.stockInfo
+                    ? ""
+                    : this.state.stockInfo.regularMarketChange.toFixed(2)}{" "}
                 </h3>
                 <h3 className="chart-header__pct">
                   {!this.state.stockInfo

@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+
 .container {
   width: 80vw;
   margin: auto;
@@ -8,17 +10,19 @@
 }
 
 .chart-header {
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 90%;
+  width: 80%;
   &__title {
-    margin-left: 10%;
+    @include font(3rem, 2rem, 500);
   }
-  &__change {
-    width: 12rem;
+  &__performance {
+    width: 35%;
     display: flex;
     justify-content: space-between;
+    @include font(1.1rem, 2rem, 400);
   }
 }
 
@@ -28,6 +32,7 @@
 }
 
 .chart-footer {
+  background-color: white;
   width: 85%;
   display: flex;
   justify-content: space-around;
@@ -35,8 +40,8 @@
   border-radius: 10px;
   padding-top: 2%;
   padding-bottom: 2%;
-  box-shadow: 0 0 10px lightgrey;
-
+  box-shadow: 0 0 4px lightgrey;
+  @include font(1.2rem, 1rem, 400);
   &__left,
   &__right {
     display: flex;
@@ -51,4 +56,9 @@
   &__right {
     align-items: flex-end;
   }
+}
+
+.chart-footer p {
+  color: #0c1e24;
+  padding-bottom: 2%;
 }

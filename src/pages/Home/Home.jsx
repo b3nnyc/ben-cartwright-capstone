@@ -83,8 +83,8 @@ export default class Home extends Component {
       <div className="background">
         <div className="container">
           <div className="hero">
-            <h2>Welcome to TrackYourTrades</h2>
-            <h3>
+            <h2 className="hero__header">Welcome to TrackYourTrades</h2>
+            <h3 className="hero__subheader">
               The platform that makes it easy to build and track your stock
               portfolio
             </h3>
@@ -99,17 +99,21 @@ export default class Home extends Component {
                 dateRange="1D"
                 copyrightStyles={styles}
               ></MiniChart>
-              <div className="card-left__price">
-                <p>Price: {this.state.stockInfo[0].regularMarketPrice}</p>
-                <p>
-                  Percent Change:{" "}
-                  {this.state.stockInfo[0].regularMarketChange.toFixed(2)}%
-                </p>
-              </div>
-              <div className="card-left__open">
-                <p>Open: {this.state.stockInfo[0].regularMarketOpen}</p>
-                <p>Close: {this.state.stockInfo[0].regularMarketPrice}</p>
-              </div>
+              <Link className="links" to={`/stock/QQQ`}>
+                <div className="card-left__container">
+                  <div className="card-left__left">
+                    <p>Price: {this.state.stockInfo[0].regularMarketPrice}</p>
+                    <p>Open: {this.state.stockInfo[0].regularMarketOpen}</p>
+                  </div>
+                  <div className="card-left__right">
+                    <p>
+                      Percent Change:{" "}
+                      {this.state.stockInfo[0].regularMarketChange.toFixed(2)}%
+                    </p>
+                    <p>Close: {this.state.stockInfo[0].regularMarketPrice}</p>
+                  </div>
+                </div>
+              </Link>
             </div>
             <div className="card-right">
               <MiniChart
@@ -120,23 +124,25 @@ export default class Home extends Component {
                 dateRange="1D"
                 copyrightStyles={styles}
               ></MiniChart>
-              <div className="card-right__price">
-                <p>
-                  Price: {this.state.stockInfo[1].regularMarketPrice.toFixed(2)}
-                </p>
-                <p>
-                  Percent Change:{" "}
-                  {this.state.stockInfo[1].regularMarketChange.toFixed(2)}%
-                </p>
-              </div>
-              <div className="card-right__open">
-                <p>Open: {this.state.stockInfo[1].regularMarketOpen}</p>
-                <p>Close: {this.state.stockInfo[1].regularMarketPrice}</p>
-              </div>
+              <Link className="links" to={`/stock/SPY`}>
+                <div className="card-right__container">
+                  <div className="card-right__left">
+                    <p>Price: {this.state.stockInfo[0].regularMarketPrice}</p>
+                    <p>Open: {this.state.stockInfo[0].regularMarketOpen}</p>
+                  </div>
+                  <div className="card-right__right">
+                    <p>
+                      Percent Change:{" "}
+                      {this.state.stockInfo[0].regularMarketChange.toFixed(2)}%
+                    </p>
+                    <p>Close: {this.state.stockInfo[0].regularMarketPrice}</p>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="trending-title">
-            <h4>Biggest Movers</h4>
+            <h4 className="trending-title__header">Biggest Movers</h4>
           </div>
           <div className="trending">
             {this.state.trending.map((trend) => {
@@ -151,7 +157,15 @@ export default class Home extends Component {
                     </div>
                     <div className="trending-lower">
                       <p className="trending-lower__pct-change"></p>
-                      <p className="trending-lower__change">
+                      <p
+                        className="trending-lower__change"
+                        style={{
+                          color:
+                            Math.sign(trend.regularMarketChangePercent) === -1
+                              ? "red"
+                              : "green",
+                        }}
+                      >
                         Change: $ {trend.regularMarketChange.toFixed(2)} /{" "}
                         {trend.regularMarketChangePercent.toFixed(2)}%
                       </p>
@@ -162,7 +176,7 @@ export default class Home extends Component {
             })}
           </div>
           <div className="news-title">
-            <h4>Today's News</h4>
+            <h4 className="news-title__header">Today's News</h4>
           </div>
           <div className="news">
             <a className="links" href={this.state.news.canonicalUrl.url}>

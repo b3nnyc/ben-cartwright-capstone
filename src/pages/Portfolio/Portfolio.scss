@@ -1,4 +1,7 @@
+@use "../../styles/partials/mixins" as *;
+
 .portfolio__title {
+  @include font(1.5rem, 2rem, 500);
   margin-left: 10%;
   margin-bottom: 2.5%;
 }
