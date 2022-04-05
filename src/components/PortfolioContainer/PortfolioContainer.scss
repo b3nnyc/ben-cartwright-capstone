@@ -1,0 +1,73 @@
+.portfolio-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio-container {
+  width: 80%;
+  box-shadow: 0 0 7px lightgrey;
+  border-radius: 5px;
+}
+
+.portfolio-container__header {
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 2%;
+}
+
+.portfolio-item {
+  &__row {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-evenly;
+    padding-top: 1%;
+    padding-bottom: 2%;
+  }
+  &__symbol,
+  &__position,
+  &__shares,
+  &__price,
+  &__current-price,
+  &__pnl,
+  &__delete {
+    position: relative;
+  }
+  &__symbol {
+    left: 2px;
+  }
+  &__position {
+    left: 1.5%;
+  }
+  &__shares {
+    left: 4%;
+  }
+  &__price {
+    left: 6%;
+  }
+  &__current-price {
+    left: 10%;
+  }
+  &__pnl {
+    left: 12.5%;
+  }
+  &__delete {
+    left: 9%;
+    border-radius: 30px;
+    border: 1px solid lightgray;
+    background-color: rgb(253, 89, 89);
+  }
+}
+
+.add-button {
+  margin-top: 2%;
+  height: 2rem;
+  width: 7rem;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+}

@@ -25,6 +25,12 @@ export default class Home extends Component {
   };
 
   componentDidMount() {
+    if (this.props.search) {
+      const searchTerm = this.props.search;
+      this.props.resetSearch();
+      this.props.history.push("/stock/" + searchTerm);
+    }
+
     if (!this.state.stockInfo) {
       apiCall
         .getHomeStockData()
@@ -59,12 +65,19 @@ export default class Home extends Component {
     }
   }
 
+  componentDidUpdate() {
+    console.log(this.props.search);
+    if (this.props.search) {
+      const searchTerm = this.props.search;
+      this.props.resetSearch();
+      this.props.history.push("/stock/" + searchTerm);
+    }
+  }
+
   render() {
     if (!this.state.stockInfo || !this.state.trending || !this.state.news) {
       return <div className="loading"></div>;
     }
-
-    console.log(this.state.news);
 
     return (
       <div className="background">

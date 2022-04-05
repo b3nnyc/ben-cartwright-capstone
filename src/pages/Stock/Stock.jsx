@@ -26,8 +26,6 @@ export default class Stock extends Component {
   }
 
   render() {
-    console.log(this.state.stockInfo);
-
     return (
       <>
         <div className="background">
@@ -59,6 +57,57 @@ export default class Stock extends Component {
                 symbol={this.state.stock}
                 hide_side_toolbar={true}
               />{" "}
+            </div>
+            <div className="chart-footer">
+              <div className="chart-footer__left">
+                <p className="chart-footer__open">
+                  Today's Open:{" "}
+                  {!this.state.stockInfo
+                    ? ""
+                    : this.state.stockInfo.regularMarketOpen}
+                </p>
+                <p className="chart-footer__hi">
+                  52 Week High:{" "}
+                  {!this.state.stockInfo
+                    ? ""
+                    : this.state.stockInfo.fiftyTwoWeekHigh}
+                </p>
+                <p className="chart-footer__beta">
+                  Volume:{" "}
+                  {!this.state.stockInfo
+                    ? ""
+                    : this.state.stockInfo.regularMarketVolume.toLocaleString()}
+                </p>
+                <p className="chart-footer__beta">
+                  Beta: {!this.state.stockInfo ? "" : this.state.stockInfo.beta}
+                </p>
+              </div>
+              <div className="chart-footer__right">
+                <p className="chart-footer__prevclose">
+                  Last Close:{" "}
+                  {!this.state.stockInfo
+                    ? ""
+                    : this.state.stockInfo.regularMarketPreviousClose}
+                </p>
+                <p className="chart-footer__lo">
+                  52 Week Low:{" "}
+                  {!this.state.stockInfo
+                    ? ""
+                    : this.state.stockInfo.fiftyTwoWeekLow}
+                </p>
+                <p className="chart-footer__dividends">
+                  Dividend per share:{" "}
+                  {!this.state.stockInfo
+                    ? ""
+                    : this.state.stockInfo.dividendsPerShare}
+                </p>
+                <p className="chart-footer__cap">
+                  Market Cap: $
+                  {!this.state.stockInfo
+                    ? ""
+                    : this.state.stockInfo.marketCap.toLocaleString()}
+                </p>
+              </div>
             </div>
           </div>
         </div>
