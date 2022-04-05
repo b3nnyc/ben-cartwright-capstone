@@ -47,13 +47,6 @@ export default {
 
   getPortfolioList: () => axios.get(`${portfolioDB}`),
 
-  // addPortfolioItem: (symbol, shares, avgPrx) =>
-  //   axios.post(`${portfolioDB}`, {
-  //     symbol: symbol,
-  //     shares: shares,
-  //     avgPrx: avgPrx,
-  //   }),
-
   getChartInfo: (symbol) =>
     axios.get(`${quoteApi}${chart}${symbol}`, {
       headers: {
@@ -70,9 +63,3 @@ export default {
       },
     }),
 };
-
-// getWatchlist: () => axios.get(`${watchlistDB}`),
-// addWatchlist: (symbol) =>
-//   axios.post(`${watchlistDB}`, {
-//     symbol: symbol,
-//   }),

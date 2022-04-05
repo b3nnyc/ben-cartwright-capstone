@@ -38,6 +38,10 @@
   box-shadow: 0 0 7px lightgrey;
   border-radius: 10px;
 
+  &__price {
+    padding-top: 3%;
+  }
+
   &__price,
   &__open {
     display: flex;

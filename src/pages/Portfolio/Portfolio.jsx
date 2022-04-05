@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PortfolioForm from "../../components/PortfolioForm/PortfolioForm";
 import PortfolioContainer from "../../components/PortfolioContainer/PortfolioContainer";
+import "./Portfolio.scss";
 
 export default function Portfolio() {
   return (

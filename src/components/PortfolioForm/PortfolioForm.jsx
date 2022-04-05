@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
+import apiCall from "../../utils/apiCall";
 import "./PortfolioForm.scss";
 
 const init = {
   symbol: "",
-  position: "Buy",
+  position: "Long",
   shares: 10,
   price: 50,
 };
@@ -39,31 +40,38 @@ export default function PortfolioForm() {
           console.log(error);
         });
     }
+    window.location.reload();
   };
 
   return (
-    <div className="new-stock">
-      <form>
-        <div className="new-stock__row">
+    <div>
+      <form className="new-stock">
+        <div className="new-stock__symbol">
+          <p>Symbol</p>
           <input
+            className="new-stock__symbol-form"
             type="text"
             name="symbol"
             value={input.symbol}
             onChange={handleChange}
           />
         </div>
-        <div className="new-stock__row">
+        <div className="new-stock__position">
+          <p>Position</p>
           <select
+            className="new-stock__position-form"
             name="position"
             onChange={handleChange}
             value={input.position}
           >
-            <option value="buy">Buy</option>
-            <option value="sell">Short</option>
+            <option value="long">Long</option>
+            <option value="short">Short</option>
           </select>
         </div>
-        <div className="new-stock__row">
+        <div className="new-stock__shares">
+          <p>Shares</p>
           <input
+            className="new-stock__shares-form"
             type="number"
             name="shares"
             min="0"
@@ -71,8 +79,10 @@ export default function PortfolioForm() {
             onChange={handleChange}
           />
         </div>
-        <div className="new-stock__row">
+        <div className="new-stock__price">
+          <p>Price</p>
           <input
+            className="new-stock__price-form"
             type="number"
             name="price"
             min="0"
