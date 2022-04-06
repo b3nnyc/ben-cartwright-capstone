@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# TrackMyTrades
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+TrackMyTrades is a SPA that allows you to access stock information to make an informed investment decision. The platform also allows you to add your own stocks to a backend, which will render each stock and return the current price and performance of that position.
 
-## Available Scripts
+## Starting the application
 
-In the project directory, you can run:
+Back end:
 
-### `npm start`
+```bash
+npm i
+npx nodemon index.js
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Front end:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm i
+npm start
+```
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application will start as soon as npm start is run. On the homepage, you will be greeted with a simple user interface. The nav bar contains a ticker tape, displaying the performance of some of the most popular stocks being traded. There’s a button to navigate to your portfolio, which I’ll showcase momentarily. The nav bar also contains a functional search feature, redirecting you to the page of whatever stock you wish to see.
 
-### `npm run build`
+If you choose to navigate to an individual stock page, youll find the symbol and daily performance, followed by the days chart. Underneath the chart, you will find some of the necessary information to help make an investment decision.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+By clicking the portfolio button, you will be redirected to the portfolio page. To add your positions to the portfolio, just hit the “Add a stock” button. Input forms will display on the page, where you input the appropriate information (the symbol, your position direction, how many shares you own and your average price) and hit the green button to post the portfolio item to the backend. The application will then fetch the current price of that symbol and calculate your profit & loss on that position. To delete a portfolio item, you simply hit the red circle found on the right side of the screen.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+I hope you enjoy the application as much as I enjoyed developing it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Future Plans
 
-### `npm run eject`
+- User authentication
+- Integrate SQL database to keep track of accounts and portfolios associated
+- Watchlist
+- "Dark mode" / ability to change theme of website on a user-by-user case
+- Include better API - currently limited to 5 calls per second
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Links
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[LinkedIn](www.linkedin.com/in/cartwright-ben)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[GitHub](https://choosealicense.com/licenses/mit/)

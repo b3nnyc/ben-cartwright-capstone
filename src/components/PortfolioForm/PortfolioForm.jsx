@@ -65,7 +65,7 @@ export default function PortfolioForm() {
             value={input.position}
           >
             <option value="long">Long</option>
-            <option value="short">Short</option>
+            <option value="Short">Short</option>
           </select>
         </div>
         <div className="new-stock__shares">

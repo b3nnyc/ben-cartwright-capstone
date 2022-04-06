@@ -83,7 +83,7 @@ export default class Home extends Component {
       <div className="background">
         <div className="container">
           <div className="hero">
-            <h2 className="hero__header">Welcome to TrackYourTrades</h2>
+            <h2 className="hero__header">Welcome to TrackMyTrades</h2>
             <h3 className="hero__subheader">
               The platform that makes it easy to build and track your stock
               portfolio

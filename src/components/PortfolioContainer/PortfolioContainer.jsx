@@ -96,7 +96,6 @@ export default function PortfolioContainer() {
           );
         })}
       </div>
-
       {hideForm ? <PortfolioForm showForm={showForm} /> : null}
       <button className="add-button" onClick={() => showForm(!hideForm)}>
         <span>Add a Stock</span>
