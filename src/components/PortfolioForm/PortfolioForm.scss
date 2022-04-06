@@ -1,0 +1,30 @@
+@use "../../styles/partials/mixins" as *;
+
+.new-stock {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 80%;
+  margin: auto;
+  &__symbol-form,
+  &__shares-form,
+  &__price-form {
+    width: 70%;
+  }
+  &__position {
+    margin-right: 5%;
+    padding-bottom: 0.3%;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    @include font(1rem, 1rem, 400);
+  }
+  &__button {
+    @include font(1rem, 1rem, 400);
+    height: 1.5rem;
+    background-color: rgb(99, 223, 99);
+    border: 1px solid lightgray;
+    border-radius: 30px;
+  }
+}

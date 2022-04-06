@@ -1,0 +1,48 @@
+@use "../../styles/partials/mixins" as *;
+
+.header {
+  background-color: #ffffff;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    height: 5rem;
+    align-items: center;
+  }
+
+  &__left {
+    width: 30%;
+  }
+
+  &__logo {
+    padding-top: 3%;
+    max-width: 9rem;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 22rem;
+  }
+
+  &__search {
+    padding-left: 4%;
+    height: 2rem;
+  }
+
+  &__button {
+    border: 1px solid lightgray;
+    height: 10rem;
+    width: 7rem;
+    background-color: white;
+    @include font(1rem, 1vw, 400);
+  }
+
+  &__button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+  }
+}
