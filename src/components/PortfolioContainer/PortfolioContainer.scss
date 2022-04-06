@@ -31,38 +31,36 @@
     justify-content: space-evenly;
     padding-top: 1%;
     padding-bottom: 2%;
+    flex: 1;
+    text-align: center;
   }
   &__symbol,
   &__position,
   &__shares,
   &__price,
   &__current-price,
-  &__pnl,
-  &__delete {
+  &__pnl {
+    width: 90%;
     @include font(1rem, 1rem, 300);
-
+    flex: 1;
     position: relative;
   }
   &__symbol {
-    left: 2px;
+    margin-left: 5%;
   }
   &__position {
-    left: 1.5%;
+    margin-left: 1%;
   }
-  &__shares {
-    left: 4%;
-  }
-  &__price {
-    left: 6%;
-  }
+
   &__current-price {
-    left: 10%;
+    margin-left: 1%;
   }
   &__pnl {
-    left: 14%;
+    margin-left: 2%;
+    color: #2962ff;
   }
   &__delete {
-    left: 9%;
+    margin-right: 1.5%;
     border-radius: 30px;
     border: 1px solid lightgray;
     background-color: rgb(253, 89, 89);
@@ -70,6 +68,9 @@
 }
 
 .add-button {
+  background-color: #2962ff;
+  color: #fcf7f8;
+  @include font(1rem, 0rem, 400);
   margin-top: 2%;
   height: 2rem;
   width: 7rem;

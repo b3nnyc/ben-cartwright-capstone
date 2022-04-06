@@ -12,6 +12,15 @@
     align-items: center;
   }
 
+  &__left {
+    width: 30%;
+  }
+
+  &__logo {
+    padding-top: 3%;
+    max-width: 40%;
+  }
+
   &__right {
     display: flex;
     align-items: center;

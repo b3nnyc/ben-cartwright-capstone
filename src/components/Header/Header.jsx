@@ -1,9 +1,8 @@
 import "./Header.scss";
-import { React, useState } from "react";
+import { React } from "react";
 import { Link } from "react-router-dom";
 import { TickerTape } from "react-ts-tradingview-widgets";
-import { useHistory } from "react-router-dom";
-import { BrowserRouter, Redirect } from "react-router-dom";
+import logo from "../../assets/images/tmt.png";
 
 const styles = {
   symbols: [
@@ -59,19 +58,17 @@ export default function Header(props) {
       <div className="header__container">
         <div className="header__left">
           <a href="/">
-            <img src="" alt="TrackYourTrades logo" />
+            <img
+              className="header__logo"
+              src={logo}
+              alt="TrackYourTrades logo"
+            />
           </a>
         </div>
         <div className="header__right">
-          {/* <Link to={`/watchlist/`}>
-          <button>WATCHLIST</button>
-        </Link> */}
           <Link to={`/portfolio/`}>
             <button className="header__button">PORTFOLIO</button>
           </Link>
-          {/* <Link to={`/login/`}>
-          <button>LOGIN</button>
-        </Link> */}
           <form onSubmit={(e) => props.setSearch(e)}>
             <input
               id="search"

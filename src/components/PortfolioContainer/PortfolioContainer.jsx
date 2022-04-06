@@ -11,7 +11,6 @@ export default function PortfolioContainer() {
 
   const pnlCalc = (price, currentPrice, position, shares) => {
     let pnl = 0;
-
     if (currentPrice) {
       if (position === "long") {
         pnl = (currentPrice - price) * shares;
@@ -79,7 +78,14 @@ export default function PortfolioContainer() {
               <div className="portfolio-item__current-price">
                 {stock.updatedPrice}
               </div>
-              <div className="portfolio-item__pnl">{2000}</div>
+              <div className="portfolio-item__pnl">
+                {pnlCalc(
+                  stock.updatedPrice,
+                  stock.price,
+                  stock.position,
+                  stock.shares
+                )}
+              </div>
               <button
                 className="portfolio-item__delete"
                 onClick={() => handleDelete(stock.id)}

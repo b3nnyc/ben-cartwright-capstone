@@ -47,7 +47,7 @@ export default function PortfolioForm() {
     <div>
       <form className="new-stock">
         <div className="new-stock__symbol">
-          <p>Symbol</p>
+          <p className="new-stock__title">Symbol</p>
           <input
             className="new-stock__symbol-form"
             type="text"
@@ -57,7 +57,7 @@ export default function PortfolioForm() {
           />
         </div>
         <div className="new-stock__position">
-          <p>Position</p>
+          <p className="new-stock__title">Position</p>
           <select
             className="new-stock__position-form"
             name="position"
@@ -69,7 +69,7 @@ export default function PortfolioForm() {
           </select>
         </div>
         <div className="new-stock__shares">
-          <p>Shares</p>
+          <p className="new-stock__title">Shares</p>
           <input
             className="new-stock__shares-form"
             type="number"
@@ -80,7 +80,7 @@ export default function PortfolioForm() {
           />
         </div>
         <div className="new-stock__price">
-          <p>Price</p>
+          <p className="new-stock__title">Price</p>
           <input
             className="new-stock__price-form"
             type="number"
